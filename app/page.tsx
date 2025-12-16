@@ -29,7 +29,7 @@ const role = messages.map(message => message.role);
               switch (part.type) {
                 case 'text':
                   return <span key={index}>{renderMessage(part.text)}</span>;
-                // other cases can handle images, tool calls, etc
+                // other cases can handle images, tool calls, etc erugfyqoulegryoatgrygf
               }
             })}
           </div>
@@ -37,7 +37,7 @@ const role = messages.map(message => message.role);
         <form onSubmit={handleSubmit}>
           <input
             value={input}
-            className="w-full p-2 mt-4 bg-zinc-800 border-2 border-solid border-zinc-700 rounded text-white"
+            className="w-full p-2 mt-4 bg-zinc-900 border-2 border-solid border-zinc-700 rounded text-white"
             placeholder="Send a message..."
             onChange={e => setInput(e.target.value)}
             disabled={status !== 'ready'}
