@@ -34,15 +34,15 @@ export default function Page() {
 }
 const role = messages.map(message => message.role);
   return (
-    <div className="container mx-auto bg-zinc-950 p-4">
-      <div className='bg-zinc-900 border-2 border-solid border-zinc-700 max-w-[90%] mx-auto p-4 rounded-lg'>
+    <div className="container flex justify-center items-center w-screen h-screen mx-auto bg-zinc-950 p-4">
+      <div className='bg-zinc-900 border-2 border-solid border-zinc-700 w-[50%] max-w-[90%] mx-auto p-4 rounded-lg'>
         <div ref={containerRef} className="pr-2">
           {messages.map(message => {
             const isUser = message.role == "user";
             return (
               <div
                 key={message.id}
-                className={`py-2 rounded-xl w-fit px-6 max-w-[80%] mb-4 min-h-12 flex ${isUser ? 'self-end w-fit border-solid border-2 border-blue-950 ml-auto bg-gray-900 text-right' : 'self-start border-2 border-dotted border-cyan-900 bg-gray-800 text-left'}`}
+                className={`py-2 rounded-xl w-fit px-6 max-w-[80%] mb-4 min-h-12 flex ${isUser ? 'self-end w-fit border-solid border-2 border-blue-950 ml-auto bg-gray-900 text-right' : 'self-start text-left'}`}
               >
                 <div className="flex-1 whitespace-pre-wrap">
                   {message.parts.map((part, index) => {
